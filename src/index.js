@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import TrafficLight from "./TrafficLight";
+import App from "./App";
 import { RED, YELLOW, GREEN, CHANGE_LIGHT } from "./actions";
 
 const initialState = { activeLight: RED };
@@ -27,10 +27,6 @@ function reducer(state = initialState, action) {
 }
 
 const store = createStore(reducer);
-
-const App = () => {
-  return <TrafficLight />;
-};
 
 ReactDOM.render(
   <Provider store={store}>
