@@ -1,13 +1,14 @@
 import React from "react";
 
 import TrafficLight from "./TrafficLight";
+import { A, B } from "./actions";
 import "./TrafficLights.css";
 
 const TrafficLights = () => {
   return (
     <div className="traffic-lights">
-      <TrafficLight />
-      <TrafficLight />
+      <TrafficLight id={A} />
+      <TrafficLight id={B} />
     </div>
   );
 };

@@ -17,10 +17,8 @@ const TrafficLight = ({ activeLight }) => {
   );
 };
 
-function mapStateToProps(state, ownProps) {
-  console.log({ state, ownProps });
-  const { id } = ownProps;
-  return { activeLight: state.activeLight[id] };
+function mapStateToProps(state) {
+  return { activeLight: state.activeLight };
 }
 
 export default connect(mapStateToProps)(TrafficLight);
